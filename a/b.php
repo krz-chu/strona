@@ -22,7 +22,7 @@
                 <a href="b.php" target="_self">Kalkulator BMI</a><br>
                 <a href="c.php" target="_self">Zostaw wiadomość</a><br>
                 <a href="d.php" target="_self">FUN</a><br>
-                <div style="position: relative; height: 75vh;">
+                <div style="position: relative; height: 75%;">
                     </b><a href="https://pl.wikipedia.org/wiki/Komunikacja_interpersonalna#:~:text=J%C4%99zyk%3A%20%C5%BCargon%2C-,brak%20precyzji,-(my%C5%9Blenie)%2C%20odmiana%20spo%C5%82eczna" target="_self" style="font-size: small;position: absolute; bottom: 0;">tu można dać więcej, ale prompt <b>"strona z użyciem PHP"</b> nie jest optymalnym przekazaniem informacj względem czego chesz 💀</a><b>
                 </div> 
                 </b>
