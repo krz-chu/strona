@@ -22,10 +22,8 @@
                 <a href="b.php" target="_self">Kalkulator BMI</a><br>
                 <a href="c.php" target="_self">Zostaw wiadomość</a><br>
                 <a href="d.php" target="_self">FUN</a><br>
-                <div style="position: relative; height: 75%;">
-                    </b><a href="https://pl.wikipedia.org/wiki/Komunikacja_interpersonalna#:~:text=J%C4%99zyk%3A%20%C5%BCargon%2C-,brak%20precyzji,-(my%C5%9Blenie)%2C%20odmiana%20spo%C5%82eczna" target="_self" style="font-size: small;position: absolute; bottom: 0;">tu można dać więcej, ale prompt <b>"strona z użyciem PHP"</b> nie jest optymalnym przekazaniem informacj względem czego chesz 💀</a><b>
-                </div> 
-                </b>
+                <!--<a href="e.php" target="_self">RR</a><br>-->
+            </b>
         </section>
         <section id="prawy">
             <h3>
@@ -35,7 +33,7 @@
                     <label for="wzrost">Wzrost(cm)</label> <input type="number" name="wzrost" id="wzrost"><br>
                     <button type="submit">kalkuluj</button>
                 </form>
-                <a href="https://www.foolproofme.org/articles/395-the-dangers-of-randomly-clicking-links" target="new"><img src="45RT.gif" style="float: right;" alt="GIF"></a>
+                <a href="https://freesvg.org/img/Troll-Face.png" target="new"><img src="45RT.gif" style="float: right;" alt="GIF"></a>
                 <?php
                     if(isset($_POST["waga"]) && isset($_POST["wzrost"])) {
                         if(!empty($_POST["waga"]) && !empty($_POST["wzrost"])) {
@@ -65,7 +63,6 @@
                     }
                 ?>
             </h3>
-
         </section>
     </section>
     <footer>

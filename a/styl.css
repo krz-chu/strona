@@ -55,6 +55,12 @@ header {
     color: #09b366;
     padding: 10px;
 }
+#result {
+    max-height: 200px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    border: 1px solid #ccc;
+}
 footer {
     background-color: #0f0f0f;
     color: white;   
