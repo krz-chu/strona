@@ -31,54 +31,10 @@
         <section id="prawy">
             <h3>SKLEP</h3>
             <?php
-                //baza create + insert + conn
-                $conn = mysqli_connect("localhost", "root", "");              
+                $conn = mysqli_connect("localhost", "root", "","dlaphpstrona");
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);
                 }
-                $sql = "CREATE DATABASE IF NOT EXISTS dlaphpstrona";
-                if ($conn->query($sql) === TRUE) {} 
-                else {
-                    echo "Error creating database: " . $conn->error;
-                }
-                $conn->select_db("dlaphpstrona");
-                $conn->query("CREATE TABLE IF NOT EXISTS produkty (
-                    id INT AUTO_INCREMENT PRIMARY KEY,
-                    produkt VARCHAR(50),
-                    ilosc int(11),
-                    cena float(11,2)
-                )");
-                $result1 = $conn->query("SELECT * FROM produkty");
-                if($result1->num_rows == 0) {
-                    $conn->query("INSERT INTO produkty (produkt, ilosc, cena) VALUES 
-                    ('kawa', 3, 60),
-                    ('jabłko', 2, 2),
-                    ('łyżeczka', 3, 10),
-                    ('herbata', 22, 15),
-                    ('banan', 5, 30),
-                    ('mleko', 2, 5),
-                    ('chleb', 1, 3),
-                    ('masło', 1, 7),
-                    ('ser', 2, 12),
-                    ('szynka', 1, 15),
-                    ('pomidor', 4, 2),
-                    ('ogórek', 3, 2),
-                    ('jajka', 10, 8),
-                    ('cukier', 1, 4),
-                    ('mąka', 1, 3),
-                    ('olej', 1, 6),
-                    ('sok pomarańczowy', 2, 4),
-                    ('woda mineralna', 6, 1),
-                    ('makaron', 2, 3),
-                    ('ryż', 1, 4),
-                    ('ketchup', 1, 5),
-                    ('musztarda', 1, 3),
-                    ('czekolada', 3, 6),
-                    ('ciastka', 2, 7),
-                    ('płatki śniadaniowe', 1, 9),
-                    ('kubek', 1, 40)");
-                }
-
                 //dodaj
                 if(isset($_POST["produkt"]) && isset($_POST["ilosc"]) && isset($_POST["cena"])) {
                     if(!empty($_POST["produkt"]) && !empty($_POST["ilosc"]) && !empty($_POST["cena"])) {
@@ -95,8 +51,7 @@
                     else {
                         echo "<p>wypełnij wszystkie pola</p>";
                     }
-                }
-                
+                }        
                 // kup
                 if (isset($_POST["produkt"]) && isset($_POST["ilosc"])) {
                     if (!empty($_POST["produkt"]) && !empty($_POST["ilosc"])) {
@@ -170,7 +125,7 @@
         </section>
     </section>
     <footer>
-        <p>wykonawca:Krzysztof wszelkie prawa zastrzeżone</p>
+        <p>wykonawca:Krzysztof Pelc, wszelkie prawa zastrzeżone</p>
     </footer>
 </body>
 </html>

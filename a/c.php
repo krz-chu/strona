@@ -32,25 +32,11 @@
             <h3>
             <a href="https://www.foolproofme.org/articles/395-the-dangers-of-randomly-clicking-links" target="new"><img src="1cat.gif" style="float:right;" alt="GIF"></a>
             <?php
-                $conn = mysqli_connect("localhost", "root", "");
-                
+                $conn = mysqli_connect("localhost", "root", "","dlaphpstrona");
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);
                 }
-                $sql = "CREATE DATABASE IF NOT EXISTS dlaphpstrona";
-                if ($conn->query($sql) === TRUE) {} 
-                else {
-                    echo "Error creating database: " . $conn->error;
-                }
-                $conn->select_db("dlaphpstrona");
-                $conn->query("CREATE TABLE IF NOT EXISTS wiadomosci (
-                    id INT AUTO_INCREMENT PRIMARY KEY,
-                    username VARCHAR(50),
-                    message TEXT,
-                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-                )");
 
-                
                 $result = $conn->query("SELECT * FROM wiadomosci ORDER BY created_at DESC");
 
                 echo "<h3>Najnowsze Wiadomości</h3>";
@@ -85,14 +71,14 @@
                 <label for="username">Użytkownik:</label> <input type="text" name="username" id="username"><br>
                 <label for="message">Wiadomość:</label><br>
                 <textarea name="message" id="message" rows="4" cols="50" required></textarea><br>
-                <button type="submit"  >Dodaj wiadomość</button>
+                <button type="submit">Dodaj wiadomość</button>
             </form>
             </h3>
             
         </section>
     </section>
     <footer>
-        <p>wykonawca:Krzysztof wszelkie prawa zastrzeżone</p>
+        <p>wykonawca:Krzysztof Pelc, wszelkie prawa zastrzeżone</p>
     </footer>
 </body>
 </html>

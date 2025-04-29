@@ -47,7 +47,7 @@
         </section>
     </section>
     <footer>
-        <p>wykonawca:Krzysztof wszelkie prawa zastrzeżone</p>
+        <p>wykonawca:Krzysztof Pelc, wszelkie prawa zastrzeżone</p>
     </footer>
 </body>
 </html>
